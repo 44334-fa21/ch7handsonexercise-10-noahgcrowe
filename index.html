@@ -12,6 +12,8 @@ body { margin:0;
              color: #006600;
              min-width: 960px;
              font-family: Verdana, Arial, sans-serif; }
+#demo { display:flex;
+        flex-direction: row;}
 header { background-color: #636631;
          background-image: url(showybg.jpg);
          background-position: bottom;
@@ -20,7 +22,7 @@ header { background-color: #636631;
          color: #cc66cc;
          text-align: right;
          padding: 0 20px;
-         border-bottom: 2px solid #000000; }		 
+         border-bottom: 2px solid #000000; }
 nav { float: left;
       width: 150px; }
 aside { float: right;
@@ -34,16 +36,19 @@ footer { font-size: .70em;
          color: #006600;
          background-color: #FFFFFF;
          padding-top: 10px;
-         clear: both; }		 
+         clear: both; }
 h1 { margin-top: 0;
      font-size: 3em;
      text-align: left;
-     text-shadow: 2px 2px 2px #000000; }	 
+     text-shadow: 2px 2px 2px #000000; }
 header a {font-size: 0.80em; }
 header a:link, header a:visited { color: #FFFFFF; }
 header a:focus, header a:hover { color: #EEEEEE; }
 nav ul { margin-top: 20px;
-         list-style-type: none; }
+         list-style-type: none;
+          display: flex;
+          flex-direction: column;
+        justify-content: center;}
 nav a { text-decoration: none;
         font-size: 1.2em; }
 nav a:link { color:#006600;}
@@ -54,6 +59,13 @@ nav img { margin: 30px;}
 main p { margin: 20px; }
 main h2, main h3 { color: #CC66CC;
                    background-color: #FFFFFF; }
+nav {flex: 7;
+      order: 2;}
+      nav ul {flex-wrap: wrap;}
+main{flex: 1;
+      order: 1;}
+aside {flex: 2;
+      order: 3;}
 .floatright { margin: 10px;
               float: right; }
 aside h3 { padding-bottom: 2px;
@@ -62,11 +74,11 @@ aside h3 { padding-bottom: 2px;
            font-size: 0.90em;
 		   color: #CC66CC; }
 .news { font-size: 0.80em;
-        margin: 10px; }		
-</style> 
+        margin: 10px; }
+</style>
 </head>
 <body>
-<div id="container">
+<div id="demp">
   <header>
     <span><a href="#content">Skip to Content</a></span>
     <h1>Door County Wildflowers</h1>
@@ -99,6 +111,6 @@ Newport Wilderness Society</a> sponsors free meadow hikes at 9am every Saturday.
     <footer> Copyright &copy; 2018 Door County Wild Flowers<br>
     </footer>
   </main>
-</div> 
+</div>
 </body>
 </html>
