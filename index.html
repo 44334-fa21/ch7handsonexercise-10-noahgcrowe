@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Door County Wildflowers</title>
+<title>Crowe Door County Wildflowers</title>
 <meta charset="utf-8">
 <style>
 header, nav, main, footer, aside { display: block; }
 * { box-sizing: border-box;}
 body { margin:0;
        background-color: #FFFFFF; }
-#container { background-color: #EEEEEE;
+header, h1, #wrapper{ margin-top: 0;}
+#wrapper { background-color: #EEEEEE;
              color: #006600;
              min-width: 960px;
              font-family: Verdana, Arial, sans-serif; }
-#demo { display:flex;
-        flex-direction: row;}
+#demo {  display:flex;
+         flex-direction: row;}
 header { background-color: #636631;
          background-image: url(showybg.jpg);
          background-position: bottom;
@@ -61,13 +62,26 @@ main h2, main h3 { color: #CC66CC;
                    background-color: #FFFFFF; }
 nav {flex: 7;
       order: 2;}
-      nav ul {flex-wrap: wrap;}
+nav ul {flex-wrap: wrap;}
 main{flex: 1;
       order: 1;}
 aside {flex: 2;
       order: 3;}
-.floatright { margin: 10px;
-              float: right; }
+@media only screen and (max-width: 1024px) {
+            body { margin: 0; padding: 0; }
+            #wrapper { width: auto; margin: 0; }
+            h1 { font-size: 200%; }
+            nav li {padding: 0 0.5em;
+                    font-size: 1.2em; }
+            #demo {flex-direction: column;}
+      nav ul {display: flex;
+              flex-direction: row;
+              justify-content: center;}
+}
+@media only screen and (max-width: 768px) {
+    nav {order: 1;}
+    nav ul{flex-wrap: wrap;}
+  }
 aside h3 { padding-bottom: 2px;
            border-bottom: 1px solid #000000;
            margin: 10px;
@@ -78,9 +92,9 @@ aside h3 { padding-bottom: 2px;
 </style>
 </head>
 <body>
-<div id="demp">
+<div id="wrapper">
   <header>
-    <span><a href="#content">Skip to Content</a></span>
+    <span><a href="#wrapper">Skip to Content</a></span>
     <h1>Door County Wildflowers</h1>
   </header>
   <nav>
@@ -101,7 +115,7 @@ aside h3 { padding-bottom: 2px;
     <p class="news">The <a href="http://www.newportwildernesssociety.org">
 Newport Wilderness Society</a> sponsors free meadow hikes at 9am every Saturday. Stop by the park office to register.</p>
   </aside>
-  <main id="content">
+  <main id="wrapper">
     <h2>Door County</h2>
     <p>Wisconsin&#39;s Door County Peninsula is ecologically diverse &mdash; upland and boreal forest, bogs, swamps, sand and rock beaches, limestone escarpments, and farmlands.</p>
     <p>The variety of ecosystems supports a large number of wildflower species.</p>
